@@ -13,8 +13,8 @@
   flex-direction: column;
   i {
     align-self: self-end;
-    padding-right: 40px;
-    padding-top: 40px;
+    margin: 40px;
+    padding: 10px;
     font-size: 30px;
     cursor: pointer;
     &:hover {
@@ -48,7 +48,7 @@
       padding: 5px 10px;
       width: 280px;
       background-color: #ffffffa1;
-      color: $whiteColor;
+      color: $blackColor;
       &:focus {
         transform: scale(1.1);
       }
@@ -85,18 +85,18 @@
       }
     }
   }
-#searchLB{
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
-}
+  #searchLB {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
   #search {
     width: 30%;
     height: 40px;
     margin-top: 10px;
     padding: 0 10px;
     background-color: #ffffffa1;
-    color: $whiteColor;
+    color: $blackColor;
     &::placeholder {
       color: #646464;
     }
@@ -108,7 +108,34 @@
   #searchJob {
     text-transform: capitalize;
   }
-
+  @include mediaQ(700px) {
+    form {
+      width: 60%;
+      grid-template-columns: repeat(1, 1fr);
+      padding-right: 0px;
+      label {
+        text-align: center;
+      }
+      input {
+        width: 100%;
+      }
+    }
+    button {
+      height: 40px;
+      width: 60%;
+      margin-top: 30px;
+    }
+    #searchLB {
+      margin-top: 0px;
+    }
+    #search {
+      width: 60%;
+    }
+    #deleteAll {
+      width: 60%;
+      margin-bottom: 30px;
+    }
+  }
 }
 .black {
   input {
@@ -134,7 +161,7 @@
       width: 60%;
       margin-top: 30px;
     }
-    #searchLB{
+    #searchLB {
       margin-top: 0px;
     }
     #search {
@@ -146,4 +173,5 @@
     }
   }
 }
+
 /* End input */

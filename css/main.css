@@ -21,6 +21,7 @@ body {
 
 body input {
   transition: all 0.3s;
+  color: #222;
 }
 
 /*End global rules */
@@ -37,8 +38,8 @@ body input {
 }
 .inp i {
   align-self: self-end;
-  padding-right: 40px;
-  padding-top: 40px;
+  margin: 40px;
+  padding: 10px;
   font-size: 30px;
   cursor: pointer;
 }
@@ -73,7 +74,7 @@ body input {
   padding: 5px 10px;
   width: 280px;
   background-color: rgba(255, 255, 255, 0.631372549);
-  color: white;
+  color: #222;
 }
 .inp form input:focus {
   transform: scale(1.1);
@@ -121,7 +122,7 @@ body input {
   margin-top: 10px;
   padding: 0 10px;
   background-color: rgba(255, 255, 255, 0.631372549);
-  color: white;
+  color: #222;
 }
 .inp #search::placeholder {
   color: #646464;
@@ -132,6 +133,34 @@ body input {
 .inp #searchName,
 .inp #searchJob {
   text-transform: capitalize;
+}
+@media (max-width: 700px) {
+  .inp form {
+    width: 60%;
+    grid-template-columns: repeat(1, 1fr);
+    padding-right: 0px;
+  }
+  .inp form label {
+    text-align: center;
+  }
+  .inp form input {
+    width: 100%;
+  }
+  .inp button {
+    height: 40px;
+    width: 60%;
+    margin-top: 30px;
+  }
+  .inp #searchLB {
+    margin-top: 0px;
+  }
+  .inp #search {
+    width: 60%;
+  }
+  .inp #deleteAll {
+    width: 60%;
+    margin-bottom: 30px;
+  }
 }
 
 .black input {
@@ -174,9 +203,10 @@ body input {
 .out {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .out table {
-  width: 90%;
+  width: 80%;
   margin-bottom: 100px;
 }
 .out table caption {

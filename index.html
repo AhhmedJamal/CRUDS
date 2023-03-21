@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon web site -->
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+    />
+    <!-- file css style -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontAwesome library -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- normalize css  -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <title>Curds</title>
+  </head>
+  <body id="toggle" class="black">
+    <div class="inp">
+      <i id="icon" class="fa-regular fa-sun"></i>
+      <div class="text">
+        <h1>Cruds</h1>
+        <p>
+          ipsum dolor sit amet consectetur adipisicing elit. nesciunt eaque
+          perspiciatis
+        </p>
+      </div>
+      <form action="">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="name" />
+        <label for="job">Job</label>
+        <input type="text" id="job" placeholder="job" />
+        <label for="country">Country</label>
+        <input type="text" id="country" placeholder="country" />
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="age" />
+      </form>
+      <button id="create">create</button>
+      <div id="deleteAll"></div>
+      <label for="" id="searchLB">Search</label>
+      <input
+        type="search"
+        id="search"
+        placeholder="Search By Name"
+        onkeyup="searchItem(this.value)"
+      />
+      <button onclick="getSearchMode(this.id)" id="searchName">
+        search Name
+      </button>
+      <button onclick="getSearchMode(this.id)" id="searchJob">
+        search Jod
+      </button>
+    </div>
+    <div class="out">
+      <table>
+        <caption id="caption">
+          Data Employees
+        </caption>
+
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Country</th>
+            <th>Age</th>
+            <th>update & delete</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

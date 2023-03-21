@@ -1,0 +1,243 @@
+/*Start global rules */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.black {
+  scroll-behavior: smooth;
+  background-color: #222;
+  color: white;
+}
+
+body {
+  background-color: rgba(225, 225, 225, 0.8392156863);
+  color: #222;
+  transition: all 0.3s;
+}
+
+body input {
+  transition: all 0.3s;
+}
+
+/*End global rules */
+/* Start input */
+.inp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inp {
+  width: 100%;
+  flex-direction: column;
+}
+.inp i {
+  align-self: self-end;
+  padding-right: 40px;
+  padding-top: 40px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.inp i:hover {
+  color: grey;
+}
+.inp .text {
+  text-align: center;
+}
+.inp .text h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+}
+.inp .text p {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 20px;
+  max-width: 50rem;
+}
+.inp form {
+  width: 80%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+  padding-right: 100px;
+}
+.inp form input {
+  border: solid 2px grey;
+  padding: 5px 10px;
+  width: 280px;
+  background-color: rgba(255, 255, 255, 0.631372549);
+  color: white;
+}
+.inp form input:focus {
+  transform: scale(1.1);
+}
+.inp form label {
+  text-align: end;
+}
+.inp button,
+.inp #deleteAll button {
+  background-color: #5d1dc4;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  width: 30%;
+  margin: 10px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.inp button:hover,
+.inp #deleteAll button:hover {
+  background-color: rgba(93, 29, 196, 0.6588235294);
+}
+.inp #deleteAll {
+  width: 30%;
+}
+.inp #deleteAll button {
+  margin: 0;
+  background-color: #eb424a;
+  width: 100%;
+}
+.inp #deleteAll button:hover {
+  background-color: rgba(235, 66, 75, 0.6156862745);
+}
+.inp #searchLB {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.inp #search {
+  width: 30%;
+  height: 40px;
+  margin-top: 10px;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.631372549);
+  color: white;
+}
+.inp #search::placeholder {
+  color: #646464;
+}
+.inp #search:focus {
+  transform: scale(1.1);
+}
+.inp #searchName,
+.inp #searchJob {
+  text-transform: capitalize;
+}
+
+.black input {
+  background-color: rgba(255, 255, 255, 0.2745098039);
+}
+.black input::placeholder {
+  color: rgba(34, 34, 34, 0.6235294118);
+}
+@media (max-width: 700px) {
+  .black form {
+    width: 60%;
+    grid-template-columns: repeat(1, 1fr);
+    padding-right: 0px;
+  }
+  .black form label {
+    text-align: center;
+  }
+  .black form input {
+    width: 100%;
+  }
+  .black button {
+    height: 40px;
+    width: 60%;
+    margin-top: 30px;
+  }
+  .black #searchLB {
+    margin-top: 0px;
+  }
+  .black #search {
+    width: 60%;
+  }
+  .black #deleteAll {
+    width: 60%;
+    margin-bottom: 30px;
+  }
+}
+
+/* End input */
+/* Start output */
+.out {
+  display: flex;
+  justify-content: center;
+}
+.out table {
+  width: 90%;
+  margin-bottom: 100px;
+}
+.out table caption {
+  font-size: 20px;
+  letter-spacing: 2px;
+  position: relative;
+  margin: 40px auto;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 30px;
+  color: #222;
+}
+.out table th,
+.out table td {
+  border: 1px solid grey;
+  padding: 10px;
+}
+.out table th {
+  text-align: start;
+  text-transform: uppercase;
+  border: 3px solid grey;
+}
+.out table button {
+  border: none;
+  padding: 5px;
+  color: white;
+  width: 40%;
+  cursor: pointer;
+}
+.out table #update {
+  background-color: #f4c442;
+}
+.out table #update:hover {
+  background-color: rgba(244, 197, 66, 0.7607843137);
+}
+.out table #delete {
+  background-color: #eb424a;
+}
+.out table #delete:hover {
+  background-color: rgba(235, 66, 75, 0.6156862745);
+}
+.out table #edit {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .out table caption {
+    font-size: 30px;
+  }
+  .out table button {
+    width: 100%;
+  }
+  .out table #edit {
+    flex-direction: column;
+  }
+}
+
+.black #caption {
+  color: rgba(225, 225, 225, 0.8392156863);
+}
+
+/* end output */
+
+/*# sourceMappingURL=main.css.map */

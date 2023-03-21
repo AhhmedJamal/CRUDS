@@ -1,0 +1,73 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixin" as *;
+/* Start output */
+.out {
+  display: flex;
+  justify-content: center;
+  table {
+    width: 90%;
+    margin-bottom: 100px;
+    caption {
+      font-size: 20px;
+      letter-spacing: 2px;
+      position: relative;
+      margin: 40px auto;
+      z-index: 1;
+      font-weight: bold;
+      font-size: 30px;
+      color: $blackColor;
+    }
+
+    th,
+    td {
+      border: 1px solid $greyColor;
+      padding: 10px;
+    }
+    th {
+      text-align: start;
+      text-transform: uppercase;
+      border: 3px solid $greyColor;
+    }
+    button {
+      border: none;
+      padding: 5px;
+      color: $whiteColor;
+      width: 40%;
+      cursor: pointer;
+    }
+
+    #update {
+      background-color: $orangeColor;
+      &:hover {
+        background-color: $orangeColorHV;
+      }
+    }
+    #delete {
+      background-color: $redColor;
+      &:hover {
+        background-color: $redColorHV;
+      }
+    }
+    #edit {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    @include mediaQ(500px) {
+      caption {
+        font-size: 30px;
+      }
+      button {
+        width: 100%;
+      }
+      #edit {
+        flex-direction: column;
+      }
+    }
+  }
+}
+.black {
+  #caption {
+    color: $whiteSmColor;
+  }
+}
+/* end output */

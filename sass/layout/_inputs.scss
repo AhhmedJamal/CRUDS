@@ -1,0 +1,149 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixin" as *;
+
+/* Start input */
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inp {
+  width: 100%;
+  @extend %flex;
+  flex-direction: column;
+  i {
+    align-self: self-end;
+    padding-right: 40px;
+    padding-top: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    &:hover {
+      color: $greyColor;
+    }
+  }
+  .text {
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+      font-size: 50px;
+    }
+    p {
+      text-transform: uppercase;
+      font-size: 20px;
+      margin-bottom: 20px;
+      max-width: 50rem;
+    }
+  }
+  form {
+    width: 80%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+    padding-right: 100px;
+    input {
+      border: solid 2px $greyColor;
+      padding: 5px 10px;
+      width: 280px;
+      background-color: #ffffffa1;
+      color: $whiteColor;
+      &:focus {
+        transform: scale(1.1);
+      }
+    }
+    label {
+      text-align: end;
+    }
+  }
+  button,
+  #deleteAll button {
+    background-color: $primerColor;
+    color: $whiteColor;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    width: 30%;
+    margin: 10px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover {
+      background-color: $primerColorHV;
+    }
+  }
+  #deleteAll {
+    width: 30%;
+    button {
+      margin: 0;
+      background-color: $redColor;
+      width: 100%;
+      &:hover {
+        background-color: $redColorHV;
+      }
+    }
+  }
+#searchLB{
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+  #search {
+    width: 30%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0 10px;
+    background-color: #ffffffa1;
+    color: $whiteColor;
+    &::placeholder {
+      color: #646464;
+    }
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+  #searchName,
+  #searchJob {
+    text-transform: capitalize;
+  }
+
+}
+.black {
+  input {
+    background-color: #ffffff46;
+    &::placeholder {
+      color: #2222229f;
+    }
+  }
+  @include mediaQ(700px) {
+    form {
+      width: 60%;
+      grid-template-columns: repeat(1, 1fr);
+      padding-right: 0px;
+      label {
+        text-align: center;
+      }
+      input {
+        width: 100%;
+      }
+    }
+    button {
+      height: 40px;
+      width: 60%;
+      margin-top: 30px;
+    }
+    #searchLB{
+      margin-top: 0px;
+    }
+    #search {
+      width: 60%;
+    }
+    #deleteAll {
+      width: 60%;
+      margin-bottom: 30px;
+    }
+  }
+}
+/* End input */
